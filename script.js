@@ -26,14 +26,76 @@ const Questions = [{
         { text: "gandhinagar", isCorrect: true },
         { text: "rajkot", isCorrect: false }
     ]
+},
+{
+    id: 3,
+    q: "What is the capital of Gujarat1",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 4,
+    q: "What is the capital of Gujarat2",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 5,
+    q: "What is the capital of Gujarat3",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 6,
+    q: "What is the capital of Gujarat4",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 7,
+    q: "What is the capital of Gujarat5",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 8,
+    q: "What is the capital of Gujarat6",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
+},
+{
+    id: 9,
+    q: "What is the capital of Gujarat7",
+    a: [{ text: "surat", isCorrect: false },
+        { text: "vadodara", isCorrect: false },
+        { text: "gandhinagar", isCorrect: true },
+        { text: "rajkot", isCorrect: false }
+    ]
 }
 ]
 
 
 var start = true;
+var answers = [];
 function iterate(id) {
-
-
     var result = document.getElementsByClassName("result");
     result[0].innerText = "";
 
@@ -63,40 +125,20 @@ function iterate(id) {
 
     var selected = "";
 
-
     op1.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightgoldenrodyellow";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op1.value;
+        selected = op1.innerText;
     })
-
-
+  
     op2.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightgoldenrodyellow";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op2.value;
+        selected = op2.innerText;
     })
-
-
+  
     op3.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightgoldenrodyellow";
-        op4.style.backgroundColor = "lightskyblue";
-        selected = op3.value;
+        selected = op3.innerText;
     })
-
-
+  
     op4.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightgoldenrodyellow";
-        selected = op4.value;
+        selected = op4.innerText;
     })
 
 
@@ -122,9 +164,10 @@ function iterate(id) {
     var id = 0;
     next.addEventListener("click", () => {
         start = false;
-        if (id < 2) {
+        if (id < 10) {
             id++;
             iterate(id);
-            console.log(id);
         }
-})
+
+    })
+    
